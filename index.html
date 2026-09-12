@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Apna Job Dekho - Your Career Our Priority</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #d93d3d;
+      --primary-dark: #8d1d1d;
+      --primary-soft: #fff0f0;
+      --text: #2b1d1d;
+      --muted: #6f5a5a;
+      --light: #fff7f7;
+      --border: #f3d6d6;
+      --white: #ffffff;
+      --dark: #1d1d1d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+      height: 78px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(217, 61, 61, 0.10);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 10px 24px rgba(57, 27, 27, 0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 150px;
+      height: 64px;
+      border-radius: 18px;
+      border: 1px solid #f0d5d5;
+      background: linear-gradient(135deg, #ffffff, #fff3f3);
+      box-shadow: 0 10px 22px rgba(201, 52, 52, 0.10);
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: contain;
+      object-position: center;
+      background: transparent;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 10px;
+      color: #7b6a6a;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 247, 247, 0.75);
+      border: 1px solid rgba(217, 61, 61, 0.08);
+    }
+
+    .nav-links a {
+      padding: 9px 12px;
+      border-radius: 999px;
+      transition: all 0.25s ease;
+      color: var(--text);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links .active {
+      color: var(--primary);
+      background: var(--primary-soft);
+      box-shadow: inset 0 0 0 1px rgba(217, 61, 61, 0.06);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(217, 61, 61, 0.20);
+      background: #fff;
+      color: var(--primary);
+      box-shadow: 0 8px 18px rgba(217, 61, 61, 0.08);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #d93d3d, #ef5b4b);
+      color: white;
+      box-shadow: 0 12px 20px rgba(217, 61, 61, 0.18);
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 22px;
+      color: var(--dark);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      background:
+        radial-gradient(
+          circle at 82% 24%,
+          rgba(116, 178, 255, 0.22),
+          transparent 24%
+        ),
+        linear-gradient(
+          115deg,
+          #f0faff,
+          #e6f5ff,
+          #dff0ff
+        );
+      overflow: hidden;
+      border-bottom: 1px solid rgba(9, 105, 232, 0.08);
+    }
+
+    .hero-inner {
+      min-height: 430px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+    }
+
+    .hero-copy {
+      padding: 50px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #dcecfb;
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: bold;
+      box-shadow: 0 10px 24px rgba(24, 102, 184, 0.05);
+    }
+
+    .eyebrow i {
+      color: #0b6ad9;
+    }
+
+    h1 {
+      font-size: 39px;
+      line-height: 1.1;
+      margin: 12px 0 7px;
+      letter-spacing: -0.04em;
+    }
+
+    h1 span {
+      color: #d93d3d;
+    }
+
+    .hero-copy > p {
+      max-width: 560px;
+      font-size: 13px;
+      color: #496586;
+      line-height: 1.7;
+    }
+
+    /* SEARCH */
+
+    .hero-search {
+      max-width: 620px;
+      margin-top: 24px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #dceafa;
+      border-radius: 16px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr auto;
+      overflow: hidden;
+      box-shadow: 0 11px 30px rgba(34, 91, 146, 0.10);
+    }
+
+    .field {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-right: 1px solid #e8eef6;
+      color: #7a8ca5;
+      font-size: 11px;
+    }
+
+    .field i {
+      color: #8ca5c2;
+    }
+
+    .field input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 11px;
+      color: #657993;
+    }
+
+    .field input::placeholder {
+      color: #7c8ea8;
+    }
+
+    .search-btn {
+      border: none;
+      background: linear-gradient(135deg, #d93d3d, #ef5b4b);
+      color: white;
+      padding: 0 22px;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 0.01em;
+    }
+
+    /* HERO STATS */
+
+    .hero-stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(151, 190, 228, 0.35);
+      border-radius: 14px;
+      padding: 10px 14px;
+      box-shadow: 0 10px 22px rgba(46, 106, 177, 0.06);
+    }
+
+    .stat-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #dcefff;
+      color: #0a6bd7;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 11px;
+      color: #153c72;
+    }
+
+    /* HERO IMAGE AREA */
+
+    .hero-art {
+      height: 365px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .abstract-visual {
+      width: min(100%, 420px);
+      height: 340px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .visual-panel {
+      width: min(100%, 360px);
+      height: 270px;
+      position: relative;
+      border-radius: 34px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.9), rgba(218,238,255,0.78));
+      border: 1px solid rgba(149, 181, 222, 0.50);
+      box-shadow: 0 18px 36px rgba(28, 89, 160, 0.12);
+      overflow: hidden;
+    }
+
+    .visual-panel::before {
+      content: "";
+      position: absolute;
+      inset: 26px 26px 30px 26px;
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(239,249,255,0.96), rgba(220,239,255,0.72));
+      border: 1px solid rgba(167, 200, 236, 0.55);
+    }
+
+    .visual-panel::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(140deg, rgba(134, 204, 255, 0.25), rgba(255,255,255,0.65));
+      right: 40px;
+      bottom: -28px;
+      box-shadow: 0 0 0 20px rgba(134, 204, 255, 0.08);
+    }
+
+    .visual-core {
+      position: absolute;
+      right: 70px;
+      bottom: 52px;
+      width: 180px;
+      height: 180px;
+      border-radius: 36% 64% 55% 45% / 44% 48% 52% 56%;
+      background: linear-gradient(135deg, rgba(134, 204, 255, 0.38), rgba(255,255,255,0.82));
+      border: 1px solid rgba(95, 164, 226, 0.45);
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,0.34);
+      z-index: 2;
+    }
+
+    .visual-ring {
+      position: absolute;
+      left: 64px;
+      bottom: 74px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 1px solid rgba(106, 161, 224, 0.50);
+      box-shadow: inset 0 0 0 18px rgba(255,255,255,0.20);
+      z-index: 3;
+    }
+
+    .visual-bubble {
+      position: absolute;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(156, 197, 235, 0.55);
+      border-radius: 999px;
+      box-shadow: 0 12px 24px rgba(41, 103, 168, 0.08);
+      color: #0b4ca5;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      padding: 8px 12px;
+    }
+
+    .visual-bubble-left {
+      left: 30px;
+      top: 38px;
+    }
+
+    .visual-bubble-right {
+      right: 26px;
+      top: 52px;
+    }
+
+    .floating-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(115, 176, 248, 0.9);
+      box-shadow: 0 0 0 6px rgba(130, 190, 255, 0.18);
+      z-index: 5;
+    }
+
+    .dot-1 { left: 90px; top: 50px; }
+    .dot-2 { right: 90px; top: 80px; }
+    .dot-3 { left: 120px; bottom: 60px; }
+
+    /* ================= COMMON SECTION ================= */
+
+    section {
+      padding: 20px 0;
+    }
+
+    .section-title {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .section-sub {
+      font-size: 11px;
+      color: #6b7d95;
+      margin-bottom: 14px;
+    }
+
+    /* ================= WHY ================= */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+
+    .why-card {
+      min-height: 108px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 12px 9px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(26,91,165,.08);
+    }
+
+    .why-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      margin: auto auto 7px;
+      display: grid;
+      place-items: center;
+      font-size: 17px;
+      background: #def4ff;
+      color: #0872dd;
+    }
+
+    .why-card:nth-child(2) .why-icon {
+      background: #ffe6e6;
+      color: #ff4d4f;
+    }
+
+    .why-card:nth-child(4) .why-icon {
+      background: #ffe4e7;
+      color: #ff4b52;
+    }
+
+    .why-card:nth-child(5) .why-icon {
+      background: #dcf7ed;
+      color: #0e9d70;
+    }
+
+    .why-card h3 {
+      font-size: 10px;
+      margin-bottom: 4px;
+    }
+
+    .why-card p {
+      font-size: 8.5px;
+      color: #71829a;
+    }
+
+    /* ================= JOBS ================= */
+
+    .jobs-section {
+      background: #f4fbff;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+    }
+
+    .view-all {
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .job-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .job-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px;
+      box-shadow: 0 8px 25px rgba(26,91,165,.08);
+    }
+
+    .job-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+    }
+
+    .company-logo {
+      width: 38px;
+      height: 38px;
+      border: 1px solid #e1ebf6;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: bold;
+      background: white;
+    }
+
+    .job-title {
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .company-name {
+      font-size: 8px;
+      color: #8392a7;
+    }
+
+    .badge {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 2px 6px;
+      border-radius: 8px;
+      color: white;
+      background: #10a66f;
+      font-size: 7px;
+    }
+
+    .badge.hot {
+      background: #ff4e4f;
+    }
+
+    .badge.premium {
+      background: #ff9f16;
+    }
+
+    .job-tags {
+      display: flex;
+      gap: 5px;
+      margin: 9px 0 5px;
+    }
+
+    .tag {
+      font-size: 7px;
+      background: #ecf8f2;
+      color: #15926a;
+      border-radius: 6px;
+      padding: 3px 5px;
+    }
+
+    .job-meta {
+      display: grid;
+      gap: 3px;
+      color: #647891;
+      font-size: 8px;
+    }
+
+    .job-meta i {
+      width: 13px;
+      color: #6888ae;
+    }
+
+    .apply {
+      width: 100%;
+      padding: 7px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background: var(--primary);
+      color: white;
+      font-size: 9px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* ================= PLANS ================= */
+
+    .billing {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9px;
+    }
+
+    .billing button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 7px 13px;
+      font-size: 9px;
+    }
+
+    .billing .active {
+      background: var(--primary);
+      color: white;
+      border-radius: 20px;
+    }
+
+    .save {
+      background: #e1f7e9;
+      color: #0b9b62;
+      border-radius: 8px;
+      padding: 2px 5px;
+      font-size: 7px;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .plan {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      min-height: 162px;
+      position: relative;
+    }
+
+    .plan.popular {
+      border-color: #6caeff;
+    }
+
+    .plan h3 {
+      font-size: 13px;
+    }
+
+    .plan small {
+      color: #687c96;
+      font-size: 9px;
+    }
+
+    .price {
+      font-size: 21px;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    .price span {
+      font-size: 9px;
+      font-weight: normal;
+      color: #63758e;
+    }
+
+    .plan ul {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      font-size: 8px;
+      color: #657991;
+    }
+
+    .plan li i {
+      color: #16a579;
+      margin-right: 5px;
+    }
+
+    .plan-btn {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 10px;
+      padding: 7px;
+      border: 1px solid #1672e8;
+      border-radius: 5px;
+      background: white;
+      color: var(--primary);
+      font-size: 9px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .popular .plan-btn,
+    .premium .plan-btn {
+      background: var(--primary);
+      color: white;
+    }
+
+    .ribbon {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      background: var(--primary);
+      color: white;
+      border-radius: 9px;
+      padding: 2px 6px;
+      font-size: 7px;
+    }
+
+    .premium .ribbon {
+      background: #f3a016;
+    }
+
+    /* ================= TESTIMONIAL ================= */
+
+    .testimonials {
+      background: #0b2f6f;
+      color: white;
+    }
+
+    .testimonials .section-title {
+      color: white;
+    }
+
+    .testimonials .section-sub {
+      color: #d0ddf0;
+    }
+
+    .slider-wrap {
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      gap: 12px;
+      overflow: hidden;
+    }
+
+    .testimonial {
+      min-width: calc(25% - 9px);
+      background: white;
+      color: #18345d;
+      border-radius: 9px;
+      padding: 12px;
+      min-height: 105px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #d6e8f8;
+      display: grid;
+      place-items: center;
+      font-size: 9px;
+      font-weight: bold;
+    }
+
+    .user strong {
+      display: block;
+      font-size: 9px;
+    }
+
+    .user span {
+      display: block;
+      font-size: 7px;
+      color: #72849b;
+    }
+
+    .stars {
+      color: #ffad17;
+      font-size: 8px;
+      margin: 4px 0;
+    }
+
+    .testimonial p {
+      font-size: 8.5px;
+      color: #657893;
+    }
+
+    .slider-controls {
+      position: absolute;
+      right: 0;
+      top: -42px;
+      display: flex;
+      gap: 5px;
+    }
+
+    .slider-controls button {
+      width: 23px;
+      height: 23px;
+      border: none;
+      border-radius: 50%;
+      background: #174487;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* ================= SUCCESS STORIES ================= */
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .story {
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 9px;
+    }
+
+    .story-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 9px;
+      background: #d8e7f2;
+      display: grid;
+      place-items: center;
+      color: #325d7e;
+    }
+
+    .story h4 {
+      font-size: 9px;
+    }
+
+    .story small {
+      font-size: 7px;
+      color: #75869e;
+    }
+
+    .story p {
+      font-size: 8px;
+      color: #667b96;
+    }
+
+    .read {
+      font-size: 7px;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    /* ================= FOOTER ================= */
+
+    .footer-top {
+      background: #eef8ff;
+      padding: 25px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1.7fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .footer-top p {
+      font-size: 8px;
+      color: #607894;
+    }
+
+    .values {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .value {
+      text-align: center;
+      font-size: 8px;
+      color: var(--primary);
+    }
+
+    .value i {
+      display: grid;
+      place-items: center;
+      margin: auto auto 5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #d9ecff;
+    }
+
+    .footer-main {
+      background: #031f4f;
+      color: #d8e4f5;
+      padding: 20px 0 10px;
+    }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: 1.2fr repeat(5, 1fr);
+      gap: 25px;
+    }
+
+    .footer-cols h4 {
+      color: white;
+      font-size: 9px;
+      margin-bottom: 8px;
+    }
+
+    .footer-cols a,
+    .footer-cols p {
+      display: block;
+      color: #c1d0e5;
+      font-size: 7.5px;
+      margin: 5px 0;
+    }
+
+    .socials {
+      display: flex;
+      gap: 8px;
+      margin-top: 9px;
+    }
+
+    .socials a {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #0d4b9d;
+      display: grid;
+      place-items: center;
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.14);
+      margin-top: 15px;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7px;
+      color: #9eb0ca;
+    }
+
+    /* ================= TOAST ================= */
+
+    .toast {
+      position: fixed;
+      right: 20px;
+      bottom: 70px;
+      background: #082d68;
+      color: white;
+      padding: 11px 15px;
+      border-radius: 8px;
+      font-size: 11px;
+      opacity: 0;
+      transform: translateY(15px);
+      pointer-events: none;
+      transition: .25s;
+      z-index: 2000;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ================= TOP BUTTON ================= */
+
+    .top-btn {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 31px;
+      height: 31px;
+      border: none;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:1000px) {
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-art {
+        display: none;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .job-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .testimonial {
+        min-width: calc(50% - 6px);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:760px) {
+
+      .container {
+        width: calc(100% - 26px);
+      }
+
+      .nav-links,
+      .nav-actions {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .hero-search {
+        grid-template-columns: 1fr;
+      }
+
+      .field {
+        border-right: none;
+        border-bottom: 1px solid #e8eef6;
+      }
+
+      .search-btn {
+        padding: 11px;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .why-grid,
+      .job-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .plans,
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial {
+        min-width: 100%;
+      }
+
+      .footer-cols {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media(max-width:430px) {
+
+      .why-grid,
+      .job-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-cols {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ================= ENHANCED HOME PAGE DESIGN ================= */
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(217, 61, 61, 0.10), transparent 26%),
+        linear-gradient(180deg, #fffaf9 0%, #fff2f0 100%);
+    }
+
+    .navbar {
+      box-shadow: 0 12px 28px rgba(182, 52, 52, 0.10);
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, #d93d3d, #ef5b4b);
+      border-radius: 999px;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links .active::after {
+      transform: scaleX(1);
+    }
+
+    .btn {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 8px 18px rgba(9, 105, 232, 0.12);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(9, 105, 232, 0.18);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #d93d3d, #ef5b4b);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.9);
+    }
+
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(circle at 80% 18%, rgba(130, 204, 255, 0.35), transparent 20%),
+        linear-gradient(120deg, #edfaff 0%, #e0f3ff 38%, #dceeff 100%);
+      border-bottom: 1px solid rgba(17, 79, 155, 0.08);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(2px);
+      z-index: 0;
+    }
+
+    .hero::before {
+      width: 230px;
+      height: 230px;
+      right: 10%;
+      top: 8%;
+      background: rgba(217, 61, 61, 0.14);
+    }
+
+    .hero::after {
+      width: 180px;
+      height: 180px;
+      left: 8%;
+      bottom: 10%;
+      background: rgba(239, 91, 75, 0.10);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      min-height: 460px;
+      padding: 20px 0 30px;
+    }
+
+    .hero-copy {
+      padding: 48px 0 40px;
+    }
+
+    .eyebrow {
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 10px 24px rgba(19, 77, 150, 0.08);
+    }
+
+    .hero-copy > p {
+      max-width: 600px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #4e6684;
+    }
+
+    .hero-search {
+      border-radius: 18px;
+      border-color: rgba(150, 192, 238, 0.7);
+      box-shadow: 0 20px 50px rgba(31, 96, 170, 0.14);
+      overflow: hidden;
+    }
+
+    .field {
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.75);
+    }
+
+    .field input,
+    .field select {
+      font-size: 12px;
+      color: #2a3f59;
+    }
+
+    .search-btn {
+      background: linear-gradient(135deg, #d93d3d, #ef5b4b);
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,0.08);
+      font-size: 12px;
+    }
+
+    .hero-stats {
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(135, 175, 221, 0.45);
+      border-radius: 14px;
+      padding: 10px 12px;
+      box-shadow: 0 12px 26px rgba(31, 88, 160, 0.08);
+      backdrop-filter: blur(4px);
+    }
+
+    .stat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dff2ff, #eaf7ff);
+      box-shadow: inset 0 0 0 1px rgba(145, 193, 239, 0.5);
+    }
+
+    .hero-art {
+      height: 400px;
+    }
+
+    .person {
+      width: 330px;
+      height: 360px;
+      border-radius: 50% 50% 10% 10% / 18% 18% 10% 10%;
+      background: linear-gradient(180deg, #d5f1ff 0%, #c8ebff 28%, #cfeafe 100%);
+      box-shadow: inset 0 -8px 30px rgba(77, 146, 212, 0.18);
+      border: 1px solid rgba(123, 172, 222, 0.38);
+    }
+
+    .person::before {
+      width: 150px;
+      height: 152px;
+      top: 54px;
+      left: 90px;
+      box-shadow: 0 -16px 0 15px #1a2639;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .person::after {
+      width: 240px;
+      height: 260px;
+      left: 45px;
+      bottom: -52px;
+      background: linear-gradient(180deg, #1e2d41, #13253a);
+      border-radius: 100px 100px 16px 16px;
+      box-shadow: 0 -12px 24px rgba(16, 35, 57, 0.15);
+    }
+
+    .floating-features {
+      top: 58px;
+      left: 20px;
+      gap: 10px;
+    }
+
+    .float-card {
+      border: 1px solid rgba(164, 201, 241, 0.8);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 14px 30px rgba(36, 94, 167, 0.10);
+      padding: 9px 12px;
+      font-size: 10.5px;
+    }
+
+    .float-card i {
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #ebf6ff, #dff0ff);
+      box-shadow: inset 0 0 0 1px rgba(143, 188, 235, 0.45);
+    }
+
+    .art-note {
+      right: 28px;
+      top: 18px;
+      color: #0a5ed9;
+      font-size: 24px;
+      text-shadow: 0 10px 20px rgba(32, 108, 196, 0.12);
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 2vw, 32px);
+      margin-bottom: 6px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .why-grid {
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .why-card {
+      background: linear-gradient(180deg, #ffffff, #f3faff);
+      border-radius: 18px;
+      padding: 18px 14px;
+      border: 1px solid rgba(195, 218, 242, 0.82);
+      box-shadow: 0 16px 32px rgba(18, 71, 135, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 42px rgba(18, 71, 135, 0.10);
+    }
+
+    .why-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      margin-bottom: 10px;
+      font-size: 19px;
+      box-shadow: inset 0 0 0 1px rgba(134, 184, 235, 0.3);
+    }
+
+    .why-card h3 {
+      font-size: 11px;
+      margin-bottom: 6px;
+    }
+
+    .why-card p {
+      font-size: 9.5px;
+      line-height: 1.65;
+    }
+
+    .jobs-section {
+      background: linear-gradient(180deg, #f3fbff 0%, #edf5ff 100%);
+      border-top: 1px solid rgba(175, 212, 235, 0.7);
+      border-bottom: 1px solid rgba(175, 212, 235, 0.7);
+    }
+
+    .section-head {
+      margin-bottom: 18px;
+    }
+
+    .view-all {
+      font-size: 11px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(145, 186, 231, 0.7);
+      background: rgba(255,255,255,0.7);
+      transition: all 0.2s ease;
+    }
+
+    .view-all:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .job-grid {
+      gap: 16px;
+    }
+
+    .job-card {
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border-radius: 18px;
+      padding: 14px;
+      border: 1px solid rgba(194, 216, 239, 0.9);
+      box-shadow: 0 16px 30px rgba(16, 74, 136, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px rgba(16, 74, 136, 0.10);
+    }
+
+    .company-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #edf7ff, #d9efff);
+      border: 1px solid rgba(162, 201, 245, 0.8);
+      font-size: 11px;
+      font-weight: 800;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+    }
+
+    .job-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #12325d;
+    }
+
+    .company-name {
+      font-size: 9px;
+      color: #7285a0;
+    }
+
+    .badge {
+      top: 6px;
+      right: 0;
+      border-radius: 999px;
+      padding: 4px 7px;
+      font-size: 7px;
+      letter-spacing: 0.03em;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(16, 164, 101, 0.18);
+    }
+
+    .job-tags {
+      gap: 6px;
+      margin: 12px 0 8px;
+    }
+
+    .tag {
+      background: linear-gradient(135deg, #edfdf5, #dcf7eb);
+      color: #0c8d62;
+      border-radius: 999px;
+      padding: 4px 7px;
+      font-size: 7px;
+      font-weight: 700;
+    }
+
+    .job-meta {
+      gap: 5px;
+      font-size: 8.5px;
+      color: #627b96;
+    }
+
+    .job-meta div {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .job-meta i {
+      color: #0e6fe0;
+    }
+
+    .apply {
+      margin-top: 12px;
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: linear-gradient(135deg, #0974e8, #2190ff);
+      box-shadow: 0 12px 20px rgba(11, 109, 224, 0.18);
+      font-size: 9.5px;
+      font-weight: 800;
+    }
+
+    .billing {
+      gap: 8px;
+      background: rgba(255,255,255,0.6);
+      border: 1px solid rgba(166, 203, 236, 0.7);
+      border-radius: 999px;
+      padding: 4px;
+    }
+
+    .billing button {
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 9.5px;
+      transition: all 0.2s ease;
+    }
+
+    .billing .active {
+      background: linear-gradient(135deg, #0c67d5, #2c8cf8);
+      box-shadow: 0 10px 20px rgba(12, 103, 213, 0.18);
+    }
+
+    .save {
+      border-radius: 999px;
+      padding: 4px 7px;
+      font-size: 7px;
+      font-weight: 700;
+    }
+
+    .plans {
+      gap: 16px;
+    }
+
+    .plan {
+      border-radius: 18px;
+      padding: 18px 16px 64px;
+      background: linear-gradient(180deg, #ffffff, #f5faff);
+      border: 1px solid rgba(189, 213, 236, 0.9);
+      box-shadow: 0 18px 32px rgba(18, 71, 135, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      overflow: hidden;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 24px 40px rgba(18, 71, 135, 0.10);
+    }
+
+    .plan h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .plan small {
+      font-size: 10px;
+      color: #6d7f98;
+    }
+
+    .price {
+      font-size: 24px;
+      margin: 12px 0 10px;
+      color: #153765;
+    }
+
+    .price span {
+      font-size: 10px;
+      color: #6a7f9d;
+    }
+
+    .plan ul {
+      gap: 7px;
+      margin-top: 8px;
+      font-size: 9px;
+      line-height: 1.6;
+    }
+
+    .plan li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .plan li i {
+      margin-top: 1px;
+      color: #1aa771;
+    }
+
+    .plan-btn {
+      left: 16px;
+      right: 16px;
+      bottom: 14px;
+      border-radius: 10px;
+      padding: 9px;
+      font-size: 10px;
+      background: linear-gradient(135deg, #ffffff, #edf7ff);
+      box-shadow: 0 8px 18px rgba(14, 109, 220, 0.10);
+    }
+
+    .popular {
+      background: linear-gradient(180deg, #f4faff, #edf6ff);
+    }
+
+    .popular .plan-btn,
+    .premium .plan-btn {
+      background: linear-gradient(135deg, #0c67d5, #2d8cff);
+      color: white;
+      border-color: transparent;
+    }
+
+    .premium .ribbon {
+      background: linear-gradient(135deg, #f7ab20, #ef8f16);
+    }
+
+    .testimonials {
+      background: linear-gradient(135deg, #072f68, #0d3f86 42%, #0c2b5d);
+      border-top: 1px solid rgba(151, 195, 245, 0.35);
+      border-bottom: 1px solid rgba(151, 195, 245, 0.35);
+    }
+
+    .testimonials .section-sub {
+      color: #d5e3fb;
+    }
+
+    .slider-controls button {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 10px 22px rgba(2, 18, 45, 0.18);
+    }
+
+    .testimonial {
+      min-width: calc(25% - 10px);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,250,255,0.98));
+      border-radius: 18px;
+      border: 1px solid rgba(180, 208, 241, 0.7);
+      padding: 14px;
+      box-shadow: 0 18px 32px rgba(5, 27, 61, 0.18);
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dff1ff, #cfeafc);
+      border: 1px solid rgba(162, 198, 232, 0.8);
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .user strong {
+      font-size: 10px;
+    }
+
+    .user span {
+      font-size: 7.5px;
+    }
+
+    .testimonial p {
+      font-size: 8.8px;
+      line-height: 1.7;
+    }
+
+    .story-grid {
+      gap: 16px;
+    }
+
+    .story {
+      background: linear-gradient(180deg, #ffffff, #f5faff);
+      border: 1px solid rgba(194, 214, 234, 0.9);
+      border-radius: 18px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 12px;
+      box-shadow: 0 16px 30px rgba(18, 71, 135, 0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .story:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 40px rgba(18, 71, 135, 0.09);
+    }
+
+    .story-avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #dff0ff, #dbeeff);
+      border: 1px solid rgba(161, 201, 242, 0.85);
+      font-size: 18px;
+    }
+
+    .story h4 {
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    .story small {
+      font-size: 7.5px;
+      color: #7387a0;
+    }
+
+    .story p {
+      margin-top: 6px;
+      font-size: 8.5px;
+      line-height: 1.65;
+      color: #647a96;
+    }
+
+    .read {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 7.5px;
+      font-weight: 700;
+    }
+
+    .footer-top {
+      background: linear-gradient(180deg, #edf7ff 0%, #eaf4ff 100%);
+    }
+
+    .brand-text strong {
+      letter-spacing: -0.02em;
+    }
+
+    .footer-grid {
+      gap: 28px;
+      align-items: center;
+    }
+
+    .values {
+      gap: 18px;
+    }
+
+    .value {
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(158, 194, 233, 0.75);
+      border-radius: 14px;
+      padding: 10px 8px;
+      min-width: 70px;
+      box-shadow: 0 10px 20px rgba(22, 82, 164, 0.05);
+    }
+
+    .value i {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #dff1ff, #d9ebff);
+      color: #0d6fe3;
+      margin: 0 auto 6px;
+      font-size: 12px;
+    }
+
+    .footer-main {
+      background: linear-gradient(180deg, #041d46, #092957);
+    }
+
+    .footer-cols h4 {
+      font-size: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-cols a,
+    .footer-cols p {
+      font-size: 8px;
+      line-height: 1.7;
+      transition: color 0.2s ease;
+    }
+
+    .footer-cols a:hover {
+      color: #ffffff;
+    }
+
+    .socials a {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0d4ba0, #0f5ee0);
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .socials a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(10, 104, 227, 0.28);
+    }
+
+    .top-btn {
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d93d3d, #ef5b4b);
+      box-shadow: 0 16px 28px rgba(217, 61, 61, 0.24);
+      transition: transform 0.2s ease;
+    }
+
+    .top-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    @media(max-width:1000px) {
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .hero-copy {
+        padding-top: 40px;
+      }
+
+      .hero-art {
+        height: 340px;
+      }
+    }
+
+    @media(max-width:760px) {
+      .hero-search {
+        box-shadow: 0 14px 32px rgba(31,96,170,0.12);
+      }
+
+      .hero-copy {
+        padding-bottom: 24px;
+      }
+
+      .hero-art {
+        display: none;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .view-all {
+        margin-top: 8px;
+      }
+
+      .testimonial {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+  <div class="container nav-inner">
+
+    <a href="index.html" class="brand">
+      <div class="brand-mark">
+        <img src="apnajobdekho.jpeg" alt="Apna Job Dekho" />
+      </div>
+
+    
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="companies.html">Companies</a>
+      <a href="practice.html">Practice</a>
+      <a href="resume.html">Resume Builder</a>
+      <a href="about.html">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <button
+        class="btn btn-outline"
+        onclick="showToast('Login page coming soon')">
+        Login
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="showToast('Sign up page coming soon')">
+        Sign Up
+      </button>
+    </div>
+
+    <button class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-inner">
+
+    <div class="hero-copy">
+
+      <div class="eyebrow">
+        <i class="fa-solid fa-sparkles"></i>
+        AI Powered Career Platform
+      </div>
+
+      <h1>
+        Build Your Future with<br>
+        <span>Apna Job Dekho</span>
+      </h1>
+
+      <p>
+        Find the right jobs, build your resume and prepare for interviews — all in one place.
+      </p>
+
+      <form class="hero-search" id="jobSearch">
+
+        <div class="field">
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search jobs, companies, skills..."
+          >
+        </div>
+
+        <div class="field">
+          <i class="fa-solid fa-location-dot"></i>
+
+          <input
+            type="text"
+            placeholder="Location"
+          >
+        </div>
+
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          Search
+        </button>
+
+      </form>
+
+      <div class="hero-stats">
+
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+
+          <div>
+            <strong>1000+ Jobs</strong>
+          </div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+
+          <div>
+            <strong>200+ Companies</strong>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-art">
+      <div class="abstract-visual" aria-hidden="true">
+        <div class="visual-panel">
+          <div class="visual-core"></div>
+          <div class="visual-ring"></div>
+          <div class="visual-bubble visual-bubble-left">AI</div>
+          <div class="visual-bubble visual-bubble-right">Growth</div>
+        </div>
+        <div class="floating-dot dot-1"></div>
+        <div class="floating-dot dot-2"></div>
+        <div class="floating-dot dot-3"></div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHY CHOOSE ================= -->
+
+<section id="companies">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Why Choose Apna Job Dekho?
+    </h2>
+
+    <p class="section-sub">
+      Everything you need to kickstart your career, at one place!
+    </p>
+
+    <div class="why-grid">
+
+      <article class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+
+        <h3>AI Resume Builder</h3>
+
+        <p>
+          Create professional & ATS-friendly resume in seconds.
+        </p>
+
+      </article>
+
+
+      <article class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+
+        <h3>Personalized Job Matching</h3>
+
+        <p>
+          Get jobs based on your skills, education & preferences.
+        </p>
+
+      </article>
+
+
+      <article class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-link"></i>
+        </div>
+
+        <h3>Official Company Links</h3>
+
+        <p>
+          Apply directly on company career pages.
+        </p>
+
+      </article>
+
+
+      <article class="why-card" id="practice">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Interview Practice</h3>
+
+        <p>
+          Technical, HR, Programming & more.
+        </p>
+
+      </article>
+
+
+      <article class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <h3>Admin Managed Jobs</h3>
+
+        <p>
+          Latest job postings with an auto-expiry system.
+        </p>
+
+      </article>
+
+
+      <article class="why-card">
+
+        <div class="why-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <h3>Career Growth</h3>
+
+        <p>
+          Be job-ready with the right resources & guidance.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= JOBS ================= -->
+
+<section class="jobs-section" id="jobs">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <h2 class="section-title">
+          Top Job Opportunities
+        </h2>
+
+        <p class="section-sub">
+          Explore the latest jobs from top companies, matched for you.
+        </p>
+      </div>
+
+      <a href="jobs.html" class="view-all">
+        View All Jobs →
+      </a>
+
+    </div>
+
+
+    <div class="job-grid" id="jobGrid">
+
+      <!-- TCS -->
+
+      <article
+        class="job-card"
+        data-search="tcs data analyst bangalore">
+
+        <div class="job-top">
+
+          <div class="company-logo">
+            tcs
+          </div>
+
+          <div>
+            <div class="job-title">
+              Data Analyst
+            </div>
+
+            <div class="company-name">
+              Tata Consultancy Services
+            </div>
+          </div>
+
+          <span class="badge">
+            Featured
+          </span>
+
+        </div>
+
+        <div class="job-tags">
+          <span class="tag">Full Time</span>
+          <span class="tag">Good Time</span>
+        </div>
+
+        <div class="job-meta">
+
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Bangalore, India
+          </div>
+
+          <div>
+            <i class="fa-solid fa-briefcase"></i>
+            0 – 2 Years
+          </div>
+
+          <div>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            ₹4 – 7 LPA
+          </div>
+
+        </div>
+
+        <button
+          class="apply"
+          onclick="showToast('Application started for TCS')">
+          Apply Now
+        </button>
+
+      </article>
+
+
+      <!-- INFOSYS -->
+
+      <article
+        class="job-card"
+        data-search="infosys system engineer hyderabad">
+
+        <div class="job-top">
+
+          <div class="company-logo">
+            Infosys
+          </div>
+
+          <div>
+            <div class="job-title">
+              System Engineer
+            </div>
+
+            <div class="company-name">
+              Infosys
+            </div>
+          </div>
+
+          <span class="badge">
+            New
+          </span>
+
+        </div>
+
+        <div class="job-tags">
+          <span class="tag">Full Time</span>
+          <span class="tag">Good Time</span>
+        </div>
+
+        <div class="job-meta">
+
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Hyderabad, India
+          </div>
+
+          <div>
+            <i class="fa-solid fa-briefcase"></i>
+            0 – 2 Years
+          </div>
+
+          <div>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            ₹3 – 6 LPA
+          </div>
+
+        </div>
+
+        <button
+          class="apply"
+          onclick="showToast('Application started for Infosys')">
+          Apply Now
+        </button>
+
+      </article>
+
+
+      <!-- WIPRO -->
+
+      <article
+        class="job-card"
+        data-search="wipro project engineer pune">
+
+        <div class="job-top">
+
+          <div class="company-logo">
+            wipro
+          </div>
+
+          <div>
+            <div class="job-title">
+              Project Engineer
+            </div>
+
+            <div class="company-name">
+              Wipro
+            </div>
+          </div>
+
+          <span class="badge">
+            New
+          </span>
+
+        </div>
+
+        <div class="job-tags">
+          <span class="tag">Full Time</span>
+          <span class="tag">Good Time</span>
+        </div>
+
+        <div class="job-meta">
+
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Pune, India
+          </div>
+
+          <div>
+            <i class="fa-solid fa-briefcase"></i>
+            0 – 2 Years
+          </div>
+
+          <div>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            ₹3 – 5 LPA
+          </div>
+
+        </div>
+
+        <button
+          class="apply"
+          onclick="showToast('Application started for Wipro')">
+          Apply Now
+        </button>
+
+      </article>
+
+
+      <!-- ACCENTURE -->
+
+      <article
+        class="job-card"
+        data-search="accenture associate software engineer bangalore">
+
+        <div class="job-top">
+
+          <div class="company-logo">
+            accenture
+          </div>
+
+          <div>
+            <div class="job-title">
+              Associate Software Engineer
+            </div>
+
+            <div class="company-name">
+              Accenture
+            </div>
+          </div>
+
+          <span class="badge hot">
+            Hot
+          </span>
+
+        </div>
+
+        <div class="job-tags">
+          <span class="tag">Full Time</span>
+          <span class="tag">Good Time</span>
+        </div>
+
+        <div class="job-meta">
+
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Bangalore, India
+          </div>
+
+          <div>
+            <i class="fa-solid fa-briefcase"></i>
+            0 – 2 Years
+          </div>
+
+          <div>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            ₹4 – 6 LPA
+          </div>
+
+        </div>
+
+        <button
+          class="apply"
+          onclick="showToast('Application started for Accenture')">
+          Apply Now
+        </button>
+
+      </article>
+
+
+      <!-- GOOGLE -->
+
+      <article
+        class="job-card"
+        data-search="google software engineer bengaluru">
+
+        <div class="job-top">
+
+          <div class="company-logo">
+            G
+          </div>
+
+          <div>
+            <div class="job-title">
+              Software Engineer
+            </div>
+
+            <div class="company-name">
+              Google
+            </div>
+          </div>
+
+          <span class="badge premium">
+            Premium
+          </span>
+
+        </div>
+
+        <div class="job-tags">
+          <span class="tag">Full Time</span>
+          <span class="tag">Good Time</span>
+        </div>
+
+        <div class="job-meta">
+
+          <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Bengaluru, India
+          </div>
+
+          <div>
+            <i class="fa-solid fa-briefcase"></i>
+            0 – 3 Years
+          </div>
+
+          <div>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            ₹8 – 15 LPA
+          </div>
+
+        </div>
+
+        <button
+          class="apply"
+          onclick="showToast('Application started for Google')">
+          Apply Now
+        </button>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PLANS ================= -->
+
+<section id="resume">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <h2 class="section-title">
+          Choose Your Plan
+        </h2>
+
+        <p class="section-sub">
+          Get access to more companies and features with our flexible plans.
+        </p>
+      </div>
+
+      <div class="billing">
+
+        <button id="monthlyBtn" class="active">
+          Monthly
+        </button>
+
+        <button id="yearlyBtn">
+          Yearly
+        </button>
+
+        <span class="save">
+          Save 20%
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="plans">
+
+      <!-- FREE -->
+
+      <article class="plan">
+
+        <h3>Free Plan</h3>
+
+        <small>
+          Access up to 25 companies
+        </small>
+
+        <div
+          class="price"
+          data-month="₹0"
+          data-year="₹0">
+
+          ₹0
+          <span>/ month</span>
+
+        </div>
+
+        <ul>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Up to 25 companies
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Job listings & company details
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Basic resume builder
+          </li>
+
+        </ul>
+
+        <button
+          class="plan-btn"
+          onclick="showToast('Free plan selected')">
+
+          Get Started
+
+        </button>
+
+      </article>
+
+
+      <!-- BASIC -->
+
+      <article class="plan popular">
+
+        <span class="ribbon">
+          Most Popular
+        </span>
+
+        <h3>Basic Plan</h3>
+
+        <small>
+          Access up to 100 companies
+        </small>
+
+        <div
+          class="price"
+          data-month="₹49"
+          data-year="₹470">
+
+          ₹49
+          <span>/ month</span>
+
+        </div>
+
+        <ul>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Up to 100 companies
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Personalized job recommendations
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            AI resume builder
+          </li>
+
+        </ul>
+
+        <button
+          class="plan-btn"
+          onclick="showToast('Upgrade flow started')">
+
+          Upgrade Now
+
+        </button>
+
+      </article>
+
+
+      <!-- PREMIUM -->
+
+      <article class="plan premium">
+
+        <span class="ribbon">
+          Best Value
+        </span>
+
+        <h3>Premium Plan</h3>
+
+        <small>
+          Access up to 200 companies
+        </small>
+
+        <div
+          class="price"
+          data-month="₹111"
+          data-year="₹1066">
+
+          ₹111
+          <span>/ month</span>
+
+        </div>
+
+        <ul>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Up to 200 companies
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            Interview practice
+          </li>
+
+          <li>
+            <i class="fa-solid fa-check"></i>
+            AI resume builder + Premium support
+          </li>
+
+        </ul>
+
+        <button
+          class="plan-btn"
+          onclick="showToast('Premium upgrade flow started')">
+
+          Upgrade Now
+
+        </button>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      What Our Users Say
+    </h2>
+
+    <p class="section-sub">
+      Real stories. Real success. See how Apna Job Dekho made a difference.
+    </p>
+
+    <div class="slider-wrap">
+
+      <div class="slider-controls">
+
+        <button id="prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button id="next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+      </div>
+
+      <div class="slider" id="testimonialSlider">
+
+        <article class="testimonial">
+
+          <div class="user">
+
+            <div class="avatar">
+              RK
+            </div>
+
+            <div>
+              <strong>Rohit Kumar</strong>
+              <span>Tech CEH Placed at TCS</span>
+            </div>
+
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Apna Job Dekho helped me create a professional
+            resume and get my first interview call. The platform
+            is really easy to use and very helpful!”
+          </p>
+
+        </article>
+
+
+        <article class="testimonial">
+
+          <div class="user">
+
+            <div class="avatar">
+              SS
+            </div>
+
+            <div>
+              <strong>Sneha Singh</strong>
+              <span>Diploma CS Placed at Infosys</span>
+            </div>
+
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I got job recommendations based on my skills.
+            The interview practice section is amazing.
+            It boosted my confidence.”
+          </p>
+
+        </article>
+
+
+        <article class="testimonial">
+
+          <div class="user">
+
+            <div class="avatar">
+              AY
+            </div>
+
+            <div>
+              <strong>Amit Yadav</strong>
+              <span>B.Tech ECE Placed at Accenture</span>
+            </div>
+
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The direct company links feature is very useful.
+            I applied from the official website and got selected.”
+          </p>
+
+        </article>
+
+
+        <article class="testimonial">
+
+          <div class="user">
+
+            <div class="avatar">
+              PS
+            </div>
+
+            <div>
+              <strong>Priya Sharma</strong>
+              <span>BCA Placed at Wipro</span>
+            </div>
+
+          </div>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “This platform is a complete career solution.
+            Resume, jobs, practice — everything in one place.”
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SUCCESS STORIES ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <h2 class="section-title">
+          Success Stories
+        </h2>
+
+        <p class="section-sub">
+          From learners to professionals — real journeys,
+          real achievements.
+        </p>
+      </div>
+
+      <a href="about.html" class="view-all">
+        View All Stories →
+      </a>
+
+    </div>
+
+
+    <div class="story-grid">
+
+      <article class="story">
+
+        <div class="story-avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+          <h4>Rahul Kumar</h4>
+
+          <small>
+            Placed at TCS
+          </small>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “From a diploma student to a software developer —
+            it all started with Apna Job Dekho.”
+          </p>
+
+          <a class="read" href="#">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="story">
+
+        <div class="story-avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+          <h4>Neha Kumari</h4>
+
+          <small>
+            Placed at Infosys
+          </small>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The resume builder and interview practice
+            section gave me the confidence I needed.”
+          </p>
+
+          <a class="read" href="#">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="story">
+
+        <div class="story-avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+          <h4>Saurabh Singh</h4>
+
+          <small>
+            Placed at Accenture
+          </small>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “I loved the personalized job recommendations.
+            It matched perfectly with my skills.”
+          </p>
+
+          <a class="read" href="#">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article class="story">
+
+        <div class="story-avatar">
+          <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div>
+
+          <h4>Pooja Verma</h4>
+
+          <small>
+            Placed at Wipro
+          </small>
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “The platform is simple, easy to use and
+            very helpful for freshers like us.”
+          </p>
+
+          <a class="read" href="#">
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="about">
+
+  <div class="footer-top">
+
+    <div class="container footer-grid">
+
+      <div class="brand">
+
+        <div class="brand-logo">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="brand-text">
+          <strong>Apna Job Dekho</strong>
+          <span>Your Career &nbsp; Our Priority</span>
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h3>About Us</h3>
+
+        <p>
+          Apna Job Dekho is an AI-powered career platform
+          designed for students, freshers and job seekers.
+          We aim to make your career journey simple,
+          accessible and successful.
+        </p>
+
+      </div>
+
+
+      <div class="values">
+
+        <div class="value">
+          <i class="fa-regular fa-lightbulb"></i>
+          Smart
+        </div>
+
+        <div class="value">
+          <i class="fa-solid fa-shield-halved"></i>
+          Secure
+        </div>
+
+        <div class="value">
+          <i class="fa-solid fa-arrows-rotate"></i>
+          Reliable
+        </div>
+
+        <div class="value">
+          <i class="fa-solid fa-users"></i>
+          For Everyone
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-main">
+
+    <div class="container">
+
+      <div class="footer-cols">
+
+        <div>
+
+          <div class="brand">
+
+            <div class="brand-logo">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div class="brand-text">
+              <strong style="color:white">
+                Apna Job Dekho
+              </strong>
+
+              <span style="color:#9eb0ca">
+                Your Career &nbsp; Our Priority
+              </span>
+            </div>
+
+          </div>
+
+          <p>
+            Empowering youth with the right tools
+            for a brighter future.
+          </p>
+
+          <div class="socials">
+
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h4>Quick Links</h4>
+
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="companies.html">Companies</a>
+          <a href="practice.html">Practice</a>
+          <a href="resume.html">Resume Builder</a>
+          <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>User Section</h4>
+
+          <a href="#">Login</a>
+          <a href="#">Sign Up</a>
+          <a href="#">My Profile</a>
+          <a href="#">My Resume</a>
+          <a href="#">Applied Jobs</a>
+          <a href="#">Saved Jobs</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Company</h4>
+
+          <a href="#">For Companies</a>
+          <a href="#">Post Job</a>
+          <a href="#">Company Login</a>
+          <a href="#">Contact Us</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Support</h4>
+
+          <a href="#">Help Center</a>
+          <a href="#">FAQs</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy Policy</a>
+
+        </div>
+
+
+        <div>
+
+          <h4>Get in Touch</h4>
+
+          <a href="mailto:support@apnajobdekho.in">
+            support@apnajobdekho.in
+          </a>
+
+          <a href="tel:+919876543210">
+            +91 98765 43210
+          </a>
+
+          <a href="#">
+            Gopalganj, Bihar, India
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <span>
+          © 2025 Apna Job Dekho. All rights reserved.
+        </span>
+
+        <span>
+          Made with ♥ for a better tomorrow
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= TOAST ================= -->
+
+<div class="toast" id="toast"></div>
+
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button class="top-btn" id="topBtn">
+
+  <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+  /* ================= TOAST ================= */
+
+  let toastTimer;
+
+  function showToast(message) {
+
+    const toast =
+      document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+
+      toast.classList.remove("show");
+
+    }, 2200);
+
+  }
+
+
+  /* ================= JOB SEARCH ================= */
+
+  const searchForm =
+    document.getElementById("jobSearch");
+
+  const searchInput =
+    document.getElementById("searchInput");
+
+  const jobCards =
+    [...document.querySelectorAll(".job-card")];
+
+
+  searchForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const query =
+      searchInput.value
+        .trim()
+        .toLowerCase();
+
+    let count = 0;
+
+    jobCards.forEach(card => {
+
+      const text =
+        card.dataset.search;
+
+      if (
+        !query ||
+        text.includes(query)
+      ) {
+
+        card.style.display = "";
+
+        count++;
+
+      } else {
+
+        card.style.display = "none";
+
+      }
+
+    });
+
+    showToast(
+      query
+        ? `${count} matching job(s) found`
+        : "Showing all jobs"
+    );
+
+    document
+      .getElementById("jobs")
+      .scrollIntoView({
+        behavior: "smooth"
+      });
+
+  });
+
+
+  /* ================= BILLING ================= */
+
+  const monthlyBtn =
+    document.getElementById("monthlyBtn");
+
+  const yearlyBtn =
+    document.getElementById("yearlyBtn");
+
+
+  function setBilling(type) {
+
+    monthlyBtn.classList.toggle(
+      "active",
+      type === "monthly"
+    );
+
+    yearlyBtn.classList.toggle(
+      "active",
+      type === "yearly"
+    );
+
+
+    document
+      .querySelectorAll(".price")
+      .forEach(price => {
+
+        const amount =
+          price.dataset[type];
+
+        price.innerHTML =
+          `${amount}
+          <span>/ ${type === "monthly"
+            ? "month"
+            : "year"}</span>`;
+
+      });
+
+  }
+
+
+  monthlyBtn.addEventListener(
+    "click",
+    () => setBilling("monthly")
+  );
+
+  yearlyBtn.addEventListener(
+    "click",
+    () => setBilling("yearly")
+  );
+
+
+  /* ================= TESTIMONIAL SLIDER ================= */
+
+  const slider =
+    document.getElementById(
+      "testimonialSlider"
+    );
+
+  document
+    .getElementById("prev")
+    .addEventListener("click", () => {
+
+      slider.scrollBy({
+        left: -slider.clientWidth,
+        behavior: "smooth"
+      });
+
+    });
+
+
+  document
+    .getElementById("next")
+    .addEventListener("click", () => {
+
+      slider.scrollBy({
+        left: slider.clientWidth,
+        behavior: "smooth"
+      });
+
+    });
+
+
+  /* ================= TOP BUTTON ================= */
+
+  const topBtn =
+    document.getElementById("topBtn");
+
+
+  topBtn.style.display = "none";
+
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 350) {
+
+      topBtn.style.display = "grid";
+
+    } else {
+
+      topBtn.style.display = "none";
+
+    }
+
+  });
+
+
+  topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
